@@ -16,8 +16,12 @@ class Scoreboard(Turtle):
         self.print_score()
 
     def print_score(self):
-        self.write(arg= f"Score: {self.curr_score}", move= False, align = "center", font= ("Arial", 11, "normal"))
+        self.write(arg= f"Score: {self.curr_score}", move= False, align = "center", font= ("Arial", 12, "normal"))
 
     def game_over(self):
-        self.setpos(0,0)
-        self.write(arg= "GAME OVER", move= False, align= "center", font= ("Arial", 30, "normal"))
+        high_score = 10 # to update with actual score from JSON file (this is for testing purpose only)
+
+        self.setpos(0, 32)
+        self.write(arg= "GAME OVER", move= False, align= "center", font= ("Arial", 40, "bold"))
+        self.setpos(0, -35)
+        self.write(arg=f'Your Score is: {self.curr_score}\nHigh Score is {high_score}', move=False, align="center", font=("Arial", 25, "normal"))
