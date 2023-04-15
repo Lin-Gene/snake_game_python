@@ -42,10 +42,10 @@ class Snake:
             self.head.setheading(270)
 
     def snake_move(self):
-            for ref in range(len(self.snake_body), 0, -1):
-                if ref != 1:
-                    self.snake_body[ref-1].goto(self.snake_body[ref - 2].position())
-                elif ref == 1:
-                    self.snake_body[0].forward(20)
+        for ref in range(len(self.snake_body), 0, -1):
+            if ref != 1:
+                self.snake_body[ref-1].goto(self.snake_body[ref - 2].position())
+            elif ref == 1:
+                self.snake_body[0].forward(20)
 
 

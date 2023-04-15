@@ -51,12 +51,12 @@ while not_quitting:
 
     continue_game = turtle.textinput("Play again?", "Press Y to play again, or any other input to quit.")
 
-    if continue_game.lower() == "y":
+    if continue_game == "y":
         game_is_on = True
         screen.clear()
     else:
         not_quitting = False
-        #screen.bye()
+
 
 
 screen.exitonclick()
